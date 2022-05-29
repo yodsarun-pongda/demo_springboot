@@ -57,4 +57,10 @@ public class CovidCaseServiceTest {
         Assert.assertNotNull(caseCovidByProvinceData);
         Assert.assertEquals("กรุงเทพมหานคร", caseCovidByProvinceData.getProvince());
     }
+
+    @Test
+    void test() {
+        CaseCovidByProvinceData caseCovidByProvinceData = covidCaseService.filterCovidCaseByProvinceName("กรุงเทพมหานคร");
+        System.out.println("caseCovidByProvinceData = " + caseCovidByProvinceData.toString());
+    }
 }
